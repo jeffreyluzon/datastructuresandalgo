@@ -14,25 +14,24 @@
 
 
 // this is a O(n) --> linear time notation becaues there is an operation for each element in the array
-const fuck = [0,1,2,1,1,1,1,1,1,1]
 
 // console.log(fuck.length)
 
-function poop(items) {
-    console.log(items[4]); //O(1)
+// function poop(items) {
+//     console.log(items[4]); //O(1)
 
-    var middleIndex = Math.floor(items.length/2);
-    var index = 0;
+//     var middleIndex = Math.floor(items.length/2);
+//     var index = 0;
 
-    while (index < middleIndex) {
-        console.log(items[index]);
-        index++;
-    }
+//     while (index < middleIndex) {
+//         console.log(items[index]);
+//         index++;
+//     }
 
-    for (let i = 0; i < 100; i++){
-        console.log('hi')
-    }
-}
+//     for (let i = 0; i < 100; i++){
+//         console.log('hi')
+//     }
+// }
 
 // poop(fuck);
 
@@ -65,10 +64,34 @@ function poop(items) {
 // boooo([1,2,3,4,5])
 
 
+// var people 
+// const people = [{
+//     name: 'joseph',
+//     age: 19 
+// }];
 
-const people = [{
-    name: 'joseph',
-    age: 19 
-}];
+// console.log(people[0])
 
-console.log(people[0])
+
+class LinkedList {
+    constructor(value) {
+        this.head = {
+            value: value,
+            next:null 
+        }
+        this.tail = this.head
+        this.length = 1
+    }
+    append(value) {
+        const newNode = {
+            value: value,
+            next: null
+        }
+        this.tail.next = newNode;
+        this.tail = newNode;
+        this.length++;
+        return this
+    }
+}
+
+
