@@ -71,7 +71,12 @@
 // }];
 
 // console.log(people[0])
-
+class Node {
+    constructor(value) {
+        this.value = value,
+        this.next = null
+    }
+}
 
 class LinkedList {
     constructor(value) {
@@ -91,6 +96,28 @@ class LinkedList {
         this.tail = newNode;
         this.length++;
         return this
+    }
+    prepend(value) {
+        const newNode = {
+            value: value,
+            next: null
+        }
+        newNode.next = this.head;
+        this.head = newNode
+        this.length++;
+        return this
+    }
+    printlist() {
+        const array = []; 
+        let currentNode =this.head;
+        while (currentNode !== null) {
+            array.push(currentNode.value)
+            currentNode = currentNode.next
+        } 
+        return array;
+    }
+    insert(index, value) {
+        
     }
 }
 
