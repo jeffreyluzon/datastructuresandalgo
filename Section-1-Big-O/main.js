@@ -117,8 +117,30 @@ class LinkedList {
         return array;
     }
     insert(index, value) {
-        
+        if (index >= this.length) {
+            return this.append(value)
+        }
+        const newNode = {
+            value: value,
+            next: null
+        }
+
     }
 }
+
+function twoSum(nums, target) {
+    for(let i=0; i < nums.length; i++) {
+        for(let j = i + 1; j < nums.length; j++){
+            if(nums[i]+nums[j] === target){
+                console.log([i, j])
+                return 
+            }
+        }
+        
+    } 
+    console.log("no work")
+}
+
+twoSum([1,2,3,4], 70)
 
 
