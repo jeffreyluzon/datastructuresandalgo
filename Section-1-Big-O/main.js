@@ -141,6 +141,6 @@ function twoSum(nums, target) {
     console.log("no work")
 }
 
-twoSum([1,2,3,4], 70)
+twoSum([1,2,3,4], 70);
 
 
