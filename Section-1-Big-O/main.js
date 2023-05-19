@@ -128,19 +128,37 @@
 //     }
 // }
 
-function twoSum(nums, target) {
-    for(let i=0; i < nums.length; i++) {
-        for(let j = i + 1; j < nums.length; j++){
-            if(nums[i]+nums[j] === target){
-                console.log([i, j])
-                return 
-            }
-        }
+// function twoSum(nums, target) {
+//     for(let i=0; i < nums.length; i++) {
+//         for(let j = i + 1; j < nums.length; j++){
+//             if(nums[i]+nums[j] === target){
+//                 console.log([i, j])
+//                 return 
+//             }
+//         }
         
-    } 
-    console.log("no work")
+//     } 
+//     console.log("no work")
+// }
+
+
+function hashTwoSum(nums, target) {
+    let map = {}
+    for (let i = 0; i < nums.length; i++) {
+        let value = nums[i];
+        let complementPair = target - value;
+        if(map[complementPair] !== undefined) {
+            return [map[complementPair], i]
+        } else {
+            map[value] = i;
+            console.log(map)
+        }
+    }
 }
 
-twoSum([1,2,3,4], 70);
-
+hashTwoSum([1,2,3,4], 7);
+let mapper = {
+    ji: 2,
+    'hello': 3
+}
 
