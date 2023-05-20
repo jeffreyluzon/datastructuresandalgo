@@ -29,15 +29,26 @@
 //     }
 
 //     for (let i = 0; i < 100; i++){
-//         console.log('hi')
-//     }
-// }
+    //         console.log('hi')
+    //     }
+    // }
+    
+    // poop(fuck);
+    
+    // this is an O(n) 
+    function containsDuplicate(nums) {
+        let table = {}
+        for (let i = 0; i < nums.length; i++) {
+            if (nums[i] in table)
+                return true;
+            table[nums[i]] = 1
+            console.log(table)
+        }
+        return false
+    }
 
-// poop(fuck);
-
-// this is an O(n) 
-
-// const boxes = [1,2,3,4,5]
+// const boxes = [1,2,3,4,1]
+// containsDuplicate(boxes)
 
 // function logAllPairsOfArray(array) {
 //     for (let i = 0; i < array.length; i++) {
@@ -142,23 +153,23 @@
 // }
 
 
-function hashTwoSum(nums, target) {
-    let map = {}
-    for (let i = 0; i < nums.length; i++) {
-        let value = nums[i];
-        let complementPair = target - value;
-        if(map[complementPair] !== undefined) {
-            return [map[complementPair], i]
-        } else {
-            map[value] = i;
-            console.log(map)
-        }
-    }
-}
+// function hashTwoSum(nums, target) {
+//     let map = {}
+//     for (let i = 0; i < nums.length; i++) {
+//         let value = nums[i];
+//         let complementPair = target - value;
+//         if(map[complementPair] !== undefined) {
+//             return [map[complementPair], i]
+//         } else {
+//             map[value] = i;
+//             console.log(map)
+//         }
+//     }
+// }
 
-hashTwoSum([1,2,3,4], 7);
-let mapper = {
-    ji: 2,
-    'hello': 3
-}
+// hashTwoSum([1,2,3,4], 7);
+// let mapper = {
+//     ji: 2,
+//     'hello': 3
+// }
 
