@@ -36,16 +36,16 @@
     // poop(fuck);
     
     // this is an O(n) 
-    function containsDuplicate(nums) {
-        let table = {}
-        for (let i = 0; i < nums.length; i++) {
-            if (nums[i] in table)
-                return true;
-            table[nums[i]] = 1
-            console.log(table)
-        }
-        return false
-    }
+    // function containsDuplicate(nums) {
+    //     let table = {}
+    //     for (let i = 0; i < nums.length; i++) {
+    //         if (nums[i] in table)
+    //             return true;
+    //         table[nums[i]] = 1
+    //         console.log(table)
+    //     }
+    //     return false
+    // }
 
 // const boxes = [1,2,3,4,1]
 // containsDuplicate(boxes)
@@ -172,4 +172,30 @@
 //     ji: 2,
 //     'hello': 3
 // }
+
+function topKFrequent(nums, k) {
+    let map = {}
+    let dumbmap= []
+    result = []
+    
+    for(let i= 0; i <= nums[nums.length-1]; i++) {
+        dumbmap[i]=0
+    }
+    for(let i= 0; i < nums.length; i++) {
+        dumbmap[nums[i]]++
+        map[nums[i]] = dumbmap[nums[i]]
+        // console.log(map)    
+    }
+    for(let j = 0; j < k; j++){
+        result.push(Object.keys(map)[j])
+        console.log(result) 
+    }
+    // console.log(Object.keys(map)[0])
+}
+
+let nums=[1,1,1,2,2,7];
+let k = 3;
+
+topKFrequent(nums ,k)
+
 
