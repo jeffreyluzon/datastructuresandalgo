@@ -176,8 +176,9 @@
 function topKFrequent(nums, k) {
     let map = {}
     let dumbmap= []
-    result = []
-    
+    let result = []
+    nums.sort()
+    // console.log(nums)
     for(let i= 0; i <= nums[nums.length-1]; i++) {
         dumbmap[i]=0
     }
@@ -186,16 +187,24 @@ function topKFrequent(nums, k) {
         map[nums[i]] = dumbmap[nums[i]]
         // console.log(map)    
     }
+    // console.log(map)
+    let mapAsArray=Object.entries(map)
+    // let mapAsArrayReversed = mapAsArray.reverse()
     for(let j = 0; j < k; j++){
-        result.push(Object.keys(map)[j])
-        console.log(result) 
-    }
-    // console.log(Object.keys(map)[0])
+        
+        result.push(mapAsArray[j][0])
+        // console.log(mapAsArray)
+        // console.log(result) 
+    } 
+    // console.log(mapAsArray.reverse())
+    console.log(mapAsArray)
+    return result
 }
 
-let nums=[1,1,1,2,2,7];
-let k = 3;
 
+let nums=[99,99,1,1,1,2,2,3];
+let k = 3;
+// [5,8]
 topKFrequent(nums ,k)
 
 
