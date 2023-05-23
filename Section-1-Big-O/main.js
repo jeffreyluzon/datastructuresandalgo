@@ -188,14 +188,14 @@ function topKFrequent(nums, k) {
         // console.log(map)    
     }
     // console.log(map)
-    let mapAsArray=Object.entries(map)
+    let mapAsArray = Object.entries(map)
     // let mapAsArrayReversed = mapAsArray.reverse()
     for(let j = 0; j < k; j++){
         
         result.push(mapAsArray[j][0])
         // console.log(mapAsArray)
         // console.log(result) 
-    } 
+    }
     // console.log(mapAsArray.reverse())
     console.log(mapAsArray)
     return result
